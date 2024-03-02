@@ -1,0 +1,94 @@
+@import url(./reset.css);
+
+:root {
+  --main-bg-color: #a8cbf1;
+  --main-highlight-color: #0d6b41;
+  --main-text-color: #333;
+  --main-link-color: #1d0b9f;
+}
+
+body {
+    color: var(--main-text-color);
+    /*
+    trocar essa fonte, não aceita acentos em português
+    font-family: "Nanum Gothic Coding", monospace;
+    */
+}
+h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.344em;
+    font-family: "Anta", sans-serif;
+}
+
+.container {
+    padding: 2em;
+    max-width: 100%;
+}
+@media screen and (min-width: 732px) {
+    .container_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+.container_section {
+    margin: 1em auto;
+    border-radius: 0.2em;
+    padding: 0.3em;
+}
+.container_title, .topbar-title {
+    text-transform: uppercase;
+}
+.topbar {
+    height: 3em;
+    background-color: var(--main-bg-color);
+    border-bottom: 0.2em solid var(--main-text-color);
+}
+.topbar_title {
+    font-size: 2em;
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: inline;
+    margin-right: 20%;
+    color: var(--main-text-color);
+    -webkit-text-stroke-width: 0.04em;
+    -webkit-text-stroke-color: white;
+}
+.topbar_longlist {
+    list-style: none;
+}
+.topbar_icon {
+    width: auto;
+    max-height: 1.435em;
+    filter: saturate(30%);
+}
+.topbar_icon:hover, .topbar_icon:focus, .topbar_icon.active {
+    filter: saturate(100%);
+}
+.bottom {
+    max-width: 100%;
+    width: 100%;
+    min-height: 5em;
+    background-color: var(--main-bg-color);
+    line-height: 1.5em;
+    position: absolute;
+    bottom: 0;
+}
+.bottom a {
+    display: block;
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+.bottom a:hover, .bottom a:focus {
+    color: blue;
+    text-decoration: underline;
+}
+.icon {
+    font-size: 1.4em;
+    letter-spacing: 0.2em;
+}
+.icon::before {
+    color: var(--main-text-color);
+}
